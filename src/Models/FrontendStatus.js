@@ -2,13 +2,14 @@ import Scraper from "./Scraper";
 /**
  * Represents the situation as a whole
  */
-class BackendStatus {
-  /**
-   * @type {Scraper[]}
-   */
-  #scrapers;
-
+class FrontendStatus {
   #jobsScraped;
+
+  #backendConnected;
+
+  #locations;
+
+  #snapshotConfigs;
 
   constructor(obj) {
     if (typeof obj === "object") {
@@ -21,4 +22,4 @@ class BackendStatus {
   }
 }
 
-export default BackendStatus;
+export default FrontendStatus;
